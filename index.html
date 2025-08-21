@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-black">
+    <div class="w-[700px] mt-12 mx-auto text-center">
+      <div class="flex justify-center mb-5">
+        <img
+          src="./icons8-movie-projector-96.png"
+          alt="logo"
+          class="w-[100px]"
+        />
+      </div>
+      <h2 class="text-neutral-200 text-3xl font-black">
+        Search unlimited movies
+      </h2>
+      <p class="text-neutral-400 text-lg">
+        Ready to watch? Enter your movie name to check if its a good choice!
+      </p>
+
+      <div class="flex">
+        <input
+          type="text"
+          placeholder="Search a movie..."
+          id="movieName"
+          class="w-[560px] px-6 py-4 text-lg bg-neutral-800 rounded-l-xl text-white focus:bg-neutral-900 focus:outline-0 transition-3s mt-5"
+        />
+        <button
+          onclick="search()"
+          class="w-[140px] text-white bg-violet-500 font-bold rounded-r-lg focus:bg-violet-700 cursor-pointer transition-3s mt-5 border-0"
+        >
+          Search Movie
+        </button>
+      </div>
+    </div>
+
+    <div id="container" class="w-[700px] mx-auto mt-16">
+      <div class="flex gap-7 text-neutral-200">
+        <div>
+          <h1 class="text-3xl font-bold" id="title"></h1>
+          <p class="text-xl text-neutral-400" id="desc"></p>
+          <p class="my-1 font-bold">
+            Year: <span class="text-neutral-400" id="year"></span>
+          </p>
+          <p class="my-1 font-bold">
+            Genre: <span class="text-neutral-400" id="genre"></span>
+          </p>
+
+          <p class="my-1 font-bold">
+            Actors: <span class="text-neutral-400" id="actors"></span>
+          </p>
+          <p class="my-1 font-bold">
+            Directors: <span class="text-neutral-400" id="directors"></span>
+          </p>
+          <p class="my-1 font-bold">
+            Awards: <span class="text-neutral-400" id="awards"></span>
+          </p>
+          <p class="my-1 font-bold">
+            Box office collections:
+            <span class="text-neutral-400" id="collection"></span>
+          </p>
+          <p class="my-1 font-bold">
+            Language: <span class="text-neutral-400" id="ln"></span>
+          </p>
+          <p class="my-1 font-bold">
+            IMDB ratings: <span class="text-neutral-400" id="rating"></span>
+          </p>
+
+          <div
+            id="suggestion"
+            class="px-4 py-1 text-lg rounded-2xl inline-block font-bold mt-2"
+          ></div>
+        </div>
+
+        <img
+          id="poster"
+          src="https://m.media-amazon.com/images/M/MV5BNWMwODYyMjQtMTczMi00NTQ1LWFkYjItMGJhMWRkY2E3NDAyXkEyXkFqcGc@._V1_SX300.jpg"
+          alt=""
+          class="rounded-xl"
+        />
+      </div>
+    </div>
+
+    <h1
+      id="error"
+      class="text-3xl font-bold text-center my-36 text-neutral-100"
+    ></h1>
+
+    <script src="app.js"></script>
+  </body>
+</html>
