@@ -28,6 +28,7 @@ function search() {
       error.innerText = "";
       if (data.Error === "Movie not found!") {
         error.innerText = "Movie not found!";
+        container.classList.add("hidden");
       } else {
         container.classList.remove("hidden");
         title.innerText = data.Title;
