@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/output.css" />
   </head>
   <body class="bg-black">
-    <div class="w-[700px] mt-12 mx-auto text-center">
+    <div class="w-[90%] mt-12 mx-auto text-center p-4">
       <div class="flex justify-center mb-5">
         <img
           src="./icons8-movie-projector-96.png"
@@ -15,31 +15,38 @@
           class="w-[100px]"
         />
       </div>
-      <h2 class="text-neutral-200 text-3xl font-black">
+      <h2 class="text-neutral-200 text-xl font-black sm:text-3xl">
         Search unlimited movies
       </h2>
-      <p class="text-neutral-400 text-lg">
+      <p class="text-neutral-400 text-sm sm:text-lg">
         Ready to watch? Enter your movie name to check if its a good choice!
       </p>
 
-      <div class="flex">
-        <input
-          type="text"
-          placeholder="Search a movie..."
-          id="movieName"
-          class="w-[560px] px-6 py-4 text-lg bg-neutral-800 rounded-l-xl text-white focus:bg-neutral-900 focus:outline-0 transition-3s mt-5"
-        />
-        <button
-          onclick="search()"
-          class="w-[140px] text-white bg-violet-500 font-bold rounded-r-lg focus:bg-violet-700 cursor-pointer transition-3s mt-5 border-0"
-        >
-          Search Movie
-        </button>
+      <div class="mx-auto max-w-[800px]">
+        <div class="flex gap-3 flex-col sm:flex-row justify-center">
+          <input
+            type="text"
+            placeholder="Search a movie..."
+            id="movieName"
+            class="sm:w-[70%] w-full px-4 py-3 text-lg bg-neutral-800 rounded-xl text-white focus:bg-neutral-900 focus:outline-0 transition-3s mt-5"
+          />
+          <button
+            onclick="search()"
+            class="sm:w-[30%] w-full text-white px-4 py-3 text-lg bg-violet-500 font-bold rounded-lg focus:bg-violet-700 cursor-pointer transition-3s sm:mt-5 border-0"
+          >
+            Search Movie
+          </button>
+        </div>
       </div>
     </div>
 
-    <div id="container" class="w-[700px] mx-auto mt-16">
-      <div class="flex gap-7 text-neutral-200">
+    <div
+      id="container"
+      class="w-[90%] mx-auto mt-16 border flex justify-center lg:w-[70%]"
+    >
+      <div
+        class="flex gap-7 flex-col-reverse md:flex-row md:justify-between text-neutral-200"
+      >
         <div>
           <h1 class="text-3xl font-bold" id="title"></h1>
           <p class="text-xl text-neutral-400" id="desc"></p>
